@@ -1,0 +1,51 @@
+[
+    {
+        "codigo": "01",
+        "nombre": "Jarron Nordico",
+        "precio": "9500",
+        "imagen": "./img/1.png",        
+        "descripcion": "Jarron de decoracion impreso en 3d.",
+        "subdescripcion":"Este elegante jarrón impreso en 3D combina la artesanía moderna con un diseño único. Su forma fluida y detalles intrincados lo convierten en una pieza perfecta para añadir un toque de sofisticación y originalidad a cualquier espacio. Hecho con precisión y creatividad, este jarrón es una obra de arte funcional que impresionará a todos los amantes del diseño."
+    },
+    {
+        "codigo": "02",
+        "nombre": "Jarron Nordico",
+        "precio": "3500",
+        "imagen": "./img/2.png",        
+        "descripcion": "Jarron de decoracion impreso en 3d.",
+        "subdescripcion":"Este elegante jarrón impreso en 3D combina la artesanía moderna con un diseño único. Su forma fluida y detalles intrincados lo convierten en una pieza perfecta para añadir un toque de sofisticación y originalidad a cualquier espacio. Hecho con precisión y creatividad, este jarrón es una obra de arte funcional que impresionará a todos los amantes del diseño."
+    },
+    {
+        "codigo": "03",
+        "nombre": "Jarron Nordico",
+        "precio": "6400",
+        "imagen": "./img/1.png",        
+        "descripcion": "Jarron de decoracion impreso en 3d.",
+        "subdescripcion":""
+    },
+    {
+        "codigo": "04",
+        "nombre": "Florero Circular",
+        "precio": "7800",
+        "imagen": "./img/8.png",        
+        "descripcion": "Florero de decoracion fabricado en 3d.",
+        "subdescripcion":"Este elegante jarrón impreso en 3D combina la artesanía moderna con un diseño único. Su forma fluida y detalles intrincados lo convierten en una pieza perfecta para añadir un toque de sofisticación y originalidad a cualquier espacio. Hecho con precisión y creatividad, este jarrón es una obra de arte funcional que impresionará a todos los amantes del diseño."
+    },
+    {
+        "codigo": "05",
+        "nombre": "Jarron Nordico",
+        "precio": "6700",
+        "imagen": "./img/7.png",        
+        "descripcion": "Jarron de decoracion impreso en 3d.",
+        "subdescripcion":"Este elegante jarrón impreso en 3D combina la artesanía moderna con un diseño único. Su forma fluida y detalles intrincados lo convierten en una pieza perfecta para añadir un toque de sofisticación y originalidad a cualquier espacio. Hecho con precisión y creatividad, este jarrón es una obra de arte funcional que impresionará a todos los amantes del diseño."
+    },
+    {
+        "codigo": "06",
+        "nombre": "Florero Circular",
+        "precio": "8900",
+        "imagen": "./img/8.png",        
+        "descripcion": "Florero de decoracion fabricado en 3d.",
+        "subdescripcion":"Este elegante jarrón impreso en 3D combina la artesanía moderna con un diseño único. Su forma fluida y detalles intrincados lo convierten en una pieza perfecta para añadir un toque de sofisticación y originalidad a cualquier espacio. Hecho con precisión y creatividad, este jarrón es una obra de arte funcional que impresionará a todos los amantes del diseño."
+    }  
+
+]
