@@ -29,7 +29,7 @@ let urlParams = new URLSearchParams(window.location.search);
 let codigoProducto = urlParams.get('codigo');
 
 // Realiza una solicitud Fetch para cargar los detalles del producto
-fetch('../datos/productos.json')
+fetch('/datos/productos.json')
     .then((respuesta) => respuesta.json())
     .then((productos) => {
         let productoSeleccionado = productos.find((producto) => producto.codigo === codigoProducto);

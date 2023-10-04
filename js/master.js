@@ -7,7 +7,7 @@
 let productosHTML = document.querySelector('.productos');
 console.log(productosHTML);
 
-fetch('../datos/productos.json')
+fetch('/datos/productos.json')
 .then((respuesta)=>{
     return respuesta.json()
 })
