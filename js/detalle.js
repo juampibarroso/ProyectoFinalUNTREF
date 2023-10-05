@@ -16,8 +16,8 @@ let codigoFinal = document.getElementById('codigo');
 let nombre = document.getElementById('nombre');
 let imagen = document.getElementById('imagen');
 let precio = document.getElementById('precio');
-let descripcion = document.getElementById('descripcion')
-let subdescripcion = document.getElementById("subdescripcion")
+let descripcion = document.getElementById('descripcion');
+let subdescripcion = document.getElementById("subdescripcion");
 
 // Tomo los datos del localStorage
 let detalleProducto = JSON.parse(localStorage.getItem('detallesProducto'));
