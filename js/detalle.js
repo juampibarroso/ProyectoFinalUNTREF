@@ -12,13 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
   let codigoSeleccionado = codigoProducto.get("codigo");
   console.log(codigoSeleccionado);
 
-  // Capturo los datos de la página de detalle donde quiero a futuro mostrar los datos del producto seleccionado
-  let codigoFinal = document.getElementById("codigo");
-  let nombre = document.getElementById("nombre");
-  let imagen = document.getElementById("imagen");
-  let precio = document.getElementById("precio");
-  let descripcion = document.getElementById("descripcion");
-  let subdescripcion = document.getElementById("subdescripcion");
+// Capturo los datos de la página de detalle donde quiero a futuro mostrar los datos del producto seleccionado
+let codigoFinal = document.getElementById('codigo');
+let nombre = document.getElementById('nombre');
+let imagen = document.getElementById('imagen');
+let precio = document.getElementById('precio');
+let descripcion = document.getElementById('descripcion')
+let subdescripcion = document.getElementById("subdescripcion")
 
   // Tomo los datos del localStorage
   let detalleProducto = JSON.parse(localStorage.getItem("detallesProducto"));
