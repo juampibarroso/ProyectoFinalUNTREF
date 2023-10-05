@@ -12,15 +12,27 @@ let codigoSeleccionado = codigoProducto.get("codigo");
 console.log(codigoSeleccionado);
 
 // Capturo los datos de la página de detalle donde quiero a futuro mostrar los datos del producto seleccionado
-let codigoFinal = document.getElementById('codigo');
-let nombre = document.getElementById('nombre');
-let imagen = document.getElementById('imagen');
-let precio = document.getElementById('precio');
-let descripcion = document.getElementById('descripcion');
+let codigoFinal = document.getElementById("codigo");
+let nombre = document.getElementById("nombre");
+let imagen = document.getElementById("imagen");
+let precio = document.getElementById("precio");
+let descripcion = document.getElementById("descripcion");
 let subdescripcion = document.getElementById("subdescripcion");
 
 // Tomo los datos del localStorage
 let detalleProducto = JSON.parse(localStorage.getItem("detallesProducto"));
+
+//Convierto el objeto literal a un array
+let arrayDetalle = JSON.parse(detalleProducto[0]);
+console.log(arrayDetalle);
+
+// Muestro de manera dinámica los detalles del producto que tengo en el localStorage
+codigoFinal.innerHTML = `Codigo delProducto: ${codigoSeleccionado}`;
+nombre.innerHTML = ` ${arrayDetalle.nombre}`;
+descripcion.innerHTML = ` ${arrayDetalle.descripcion}`;
+subdescripcion.innerHTML = `${arrayDetalle.subdescripcion}`;
+precio.innerHTML = `$${arrayDetalle.precio}`;
+imagen.innerHTML = `<img class="w-100" src="${arrayDetalle.imagen}" alt="${arrayDetalle.nombre}"/>`;
 
 // Capturo el botón que me permite regresar y además borrar todo lo que tengo en mi localStorage
 let botonRegresar = document.getElementById("botonRegresar");
