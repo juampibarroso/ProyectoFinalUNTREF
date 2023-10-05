@@ -24,7 +24,7 @@ fetch('datos/productos.json')
         <article class="producto col-12 col-md-6 col-lg-4">
             <img class="w-100" src="${producto.imagen}" alt="${producto.nombre}" style="border-radius: 20px;">
             <h2 class="text-center">${producto.nombre}</h2>
-            <p class="text-center">${producto.descripcion}<p>
+            <p class="text-center">${producto.descripcion}</p>
             <h3 class="text-center">$${producto.precio}</h3>
             <a   id='${JSON.stringify(producto)}' href= '#' class='btn btn-outline-primary d-block botonDetalle' >Ver detalle </a>
         </article>
