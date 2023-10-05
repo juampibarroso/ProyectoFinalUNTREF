@@ -1,44 +1,51 @@
-// Captura el elemento donde se mostrarán los detalles del producto
-let detalleProductoHTML = document.querySelector('.detalle-producto');
+//Para que amplien sus conocimientos sobre el objeto location
+//https://www.w3schools.com/js/js_window_location.asp
+//https://developer.mozilla.org/en-US/docs/Web/API/Location
+// Aquí guardo lo que trae el query strings
+let codigo = location.search;
+console.log(codigo);
+// Aquí uso esta instancia para lograr ver mejor los datos del query strings
+let codigoProducto = new URLSearchParams(codigo);
+console.log(codigoProducto);
+// Aquí guardo el código que el usuario seleccionó
+let codigoSeleccionado = codigoProducto.get('codigo');
+console.log(codigoSeleccionado);
 
-// Función para cargar y mostrar los detalles del producto
-function mostrarDetalles(producto) {
-    detalleProductoHTML.innerHTML = `
-        <div class="text-center">
-            <img src="${producto.imagen}" alt="${producto.nombre}" style="max-width: 100%;" class="img-fluid rounded">
-        </div>
-        <h1 class="display-2 text-center">${producto.nombre}</h1>
-        <br>
-        <h3 class="display-6 text-center">${producto.descripcion}</h3>
-        <br>
-        <p class="lead text-center">${producto.subdescripcion}</p>
-        <br>
-        <h2 class="text-primary text-center">$${producto.precio}</h2>
-        <br>
+// Capturo los datos de la página de detalle donde quiero a futuro mostrar los datos del producto seleccionado
+let codigoFinal = document.getElementById('codigo');
+let nombre = document.getElementById('nombre');
+let imagen = document.getElementById('imagen');
+let precio = document.getElementById('precio');
+let descripcion = document.getElementById('descripcion')
+let subdescripcion = document.getElementById("subdescripcion")
 
-        <div class="text-center">
-        <a class="btn btn-primary btn-block btn-custom " href="index.html#nuestros-productos">Volver atras</a>
-        </div>
+// Tomo los datos del localStorage
+let detalleProducto = JSON.parse(localStorage.getItem('detallesProducto'));
 
-        
-    `;
+if (detalleProducto) {
+    // Convierto el objeto literal a un array
+    let arrayDetalle = JSON.parse(detalleProducto[0]);
+    console.log(arrayDetalle);
+
+    // Muestro de manera dinámica los detalles del producto que tengo en el localStorage
+    codigoFinal.innerHTML = `CodigoProducto: ${codigoSeleccionado}`;
+    nombre.innerHTML = ` ${arrayDetalle.nombre}`;
+    descripcion.innerHTML = ` ${arrayDetalle.descripcion}`;
+    subdescripcion.innerHTML = `${arrayDetalle.subdescripcion}`;
+    precio.innerHTML = `$${arrayDetalle.precio}`;
+    imagen.innerHTML = `<img class="w-100" src="${arrayDetalle.imagen}" alt="${arrayDetalle.nombre}"/>`;
+} else {
+    // Maneja el caso en el que detalleProducto sea null o no esté en el localStorage
+    // Por ejemplo, puedes mostrar un mensaje de error o redirigir al usuario a otra página.
 }
 
-// Obtiene el código del producto de la URL
-let urlParams = new URLSearchParams(window.location.search);
-let codigoProducto = urlParams.get('codigo');
-
-// Realiza una solicitud Fetch para cargar los detalles del producto
-fetch('/datos/productos.json')
-    .then((respuesta) => respuesta.json())
-    .then((productos) => {
-        let productoSeleccionado = productos.find((producto) => producto.codigo === codigoProducto);
-        if (productoSeleccionado) {
-            mostrarDetalles(productoSeleccionado);
-        } else {
-            detalleProductoHTML.innerHTML = '<p>Producto no encontrado.</p>';
-        }
-    })
-    .catch((error) => {
-        console.log('Uff ha ocurrido un error: ' + error);
-    });
+// Capturo el botón que me permite regresar y además borrar todo lo que tengo en mi localStorage
+let botonRegresar = document.getElementById('botonRegresar');
+botonRegresar.addEventListener('click', function(){
+    // Este a mí no me funcionó
+    // localStorage.removeItem('detalleProducto');
+    // Pero este sí - Perfectamente borra todo lo que está en el localStorage
+    localStorage.clear()
+    // Aquí retorno a la página principal y muestro todos los datos que están en el archivo json
+    location.href = 'index.html'
+})
