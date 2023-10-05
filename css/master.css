@@ -1,0 +1,88 @@
+/* Estilo para la barra de navegacion */
+.navbar-nav .nav-link {
+    color: white;
+  }
+  .navbar-brand {
+    margin-right: 100px; /* Espacio a la derecha de la navbar-brand */
+  }
+  .nav-link {
+    margin-right: 20px;
+  }
+  
+  /* Estilos para el banner */
+  .banner {
+    background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir todo el banner */
+    background-position: center; /* Centra la imagen de fondo horizontalmente */
+    padding: 100px 0; /* Espaciado interno del banner */
+  }
+  
+  /* Estilos para el texto del banner */
+  .banner {
+    background-size: cover; /* Ajusta el tamaño de la imagen de fondo para cubrir todo el banner */
+    background-position: center; /* Centra la imagen de fondo horizontalmente */
+    padding: 400px 0; /* Aumenta la altura del banner ajustando el valor "200px" según tu preferencia */
+  }
+  .banner h1 {
+    font-size: 80px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .banner p {
+    font-size: 38px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  /* Estilos personalizados para la sección Quiénes somos */
+  /* Estilos para la sección Quiénes somos */
+  #quienes-somos {
+    background-color: #ffffff; /* Fondo blanco */
+    color: #007bff; /* Texto azul para el título */
+    text-shadow: 2px 2px 4px rgba(55, 20, 212, 0.5);
+  }
+  
+  /* Estilos para el subtítulo */
+  #quienes-somos p.fs-4 {
+    color: #333333; /* Texto gris oscuro para el subtítulo */
+  }
+  
+  /* Estilos para el conetnido*/
+  #nuestros-productos {
+
+    background-color: #ccddef;    
+    text-align: center; /* Centra el título */
+    padding: 50px 20px; /* Añade espacio arriba y abajo del título */
+    color: white; /* Cambia el color del texto a blanco */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Estilos personalizados para el producto */
+  .producto img {
+    margin-top: 30px; /* Agrega espacio arriba de la imagen */
+  }
+  /* Estilos personalizados para el botón */
+  .btn-custom {
+    color: white; /* Texto blanco */
+    color: azure;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .btn-custom:hover {
+    background-color: #fff; /* Color de fondo azul al pasar el mouse */
+    color: rgb(23, 13, 219); /* Texto blanco en el hover */
+  }
+  
+  /* Estilos para detalle.html */
+  #detalle-producto{
+    background-color: #3910a8; /* Fondo blanco */
+    color: #007bff; /* Texto azul para el título */
+    text-shadow: 2px 2px 4px rgba(55, 20, 212, 0.5);
+    text-align: center;
+  
+  }
+  
+  
